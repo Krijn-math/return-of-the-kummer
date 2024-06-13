@@ -1,7 +1,7 @@
 # Return of the Kummer
 
 This repository contains the code accompanying the paper 
-*[	Return of the Kummer: a toolbox for genus 2 cryptography](https://eprint.iacr.org/2024/XXX)* by Maria Corte-Real Santos and Krijn Reijnders.
+*[	Return of the Kummer: a toolbox for genus 2 cryptography](https://eprint.iacr.org/2024/948)* by Maria Corte-Real Santos and Krijn Reijnders.
 
 All code in this repository was written in `Magma`, `Python` and [`SageMath`](https://www.sagemath.org/), and is made publicly available under the MIT license. The dependencies are:
 - Python 3.11.1 (with matplotlib)
