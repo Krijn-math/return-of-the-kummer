@@ -267,7 +267,7 @@ function JKappa(D, kappa)
     if Degree(D[2]) eq 3 then
         //this is an unusual error, based on Magma's way to represent elements in Mumford coordinates
         //an edge case, never happens in cryptographic applications, and can manually be avoided
-        print "todo with infinity";
+        print "edge case, requires particular formulas for infinity";
         assert false;
     end if;
 
@@ -372,7 +372,7 @@ function RosenhainToKummer(D, ros, K)
     if Degree(D[2]) eq 3 then
         //this is an unusual error, based on Magma's way to represent elements in Mumford coordinates
         //an edge case, never happens in cryptographic applications, and can manually be avoided
-        print "todo with infinity";
+        print "edge case, requires particular formulas for infinity";
         assert false;
     end if;
 
@@ -463,7 +463,7 @@ function Fp2RosenhainToKummer(D, ros, K)
     if Degree(D[2]) eq 3 then
         //this is an unusual error, based on Magma's way to represent elements in Mumford coordinates
         //an edge case, never happens in cryptographic applications, and can manually be avoided
-        print "todo with infinity";
+        print "edge case, requires particular formulas for infinity";
         assert false;
     end if;
 
@@ -821,7 +821,6 @@ if kappa[1][5] in Fp then
         //we manually avoid the bugged case where the Mumford representation in Magma is unusual
         if Degree(D[2]) eq 3 then
             repeat 
-            "TODO: fix inifinty mapping JKappa";
             D := Random(J_alpha);
             until Degree(D[2]) ne 3;
         end if;
@@ -848,9 +847,9 @@ if kappa[1][5] in Fp then
     for i in [1..10] do
         P := Random(E_alpha);           //random point on E_alpha
         D_alpha := eta(P);              //mapped to J_alpha
+        //we manually avoid the bugged case where the Mumford representation in Magma is unusual
         if Degree(D_alpha[2]) eq 3 then
             repeat 
-            "todo fix inifinty mapping JKappa";
             P := Random(E_alpha);           //random point on E_alpha
             D_alpha := eta(P); 
             until Degree(D_alpha[2]) ne 3;
@@ -863,7 +862,7 @@ else
     /*
     we avoid this case using the lemma on twists of Kummers, so this doesnt happen anymore
     */
-    print "SHOULD NOT HAPPEN ANYMORE";
+    print "SHOULD NOT HAPPEN";
 
     for i in [1..10] do
         P := Random(E_alpha);           //random point on E_alpha
@@ -871,7 +870,6 @@ else
         //we manually avoid the bugged case where the Mumford representation in Magma is unusual
         if Degree(D_alpha[2]) eq 3 then
             repeat 
-            "todo fix inifinty mapping JKappa";
             P := Random(E_alpha);           //random point on E_alpha
             D_alpha := eta(P); 
             until Degree(D_alpha[2]) ne 3;

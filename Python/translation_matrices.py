@@ -9,7 +9,8 @@ from kummer_arithmetic import *
 
 def get_mat(K, ros, ind):
     """
-        TODO
+        computes the matrices that represent addition by L_ij in K[2]
+        given by the addition matrices W_ij from the appendix
     """
     if ind == [0, 1]:
         return [[0, 1, 0, 0],
@@ -43,7 +44,7 @@ def get_mat(K, ros, ind):
     if (taun**2) * P[2] != (mu0 * taun - taud) / (mu1 * taun - taud):
         taun, taud = taud, taun
 
-    # TODO: remove the inversions and remove superflouous computations
+    # improvement: remove the inversions and remove superflouous computations
     tau = fp_mul(taun, fp_inv(taud))
     tau_inv = fp_inv(tau)
     tau_sqr = fp_sqr(tau)
@@ -140,7 +141,8 @@ def get_mat(K, ros, ind):
 def matrix_mult(M, P):
     # Computes M*P
     """
-        TODO
+        given an addition matrix W_ij from the function above, applies it to a Kummer point P in K
+        and thus, returns a representation of P + L_ij
     """
     assert P != [0,0,0,0]
 

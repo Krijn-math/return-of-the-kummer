@@ -85,7 +85,7 @@ def verification_uncompressed(pk, sigma, message):
     hash = hash_to_point(message, K, ros, precomp)
     # print(f"hash done, current cost {get_cost(counter)}\n")
 
-    # TODO: Just want to see the costs, but not properly done
+    # note: Just want to see the costs, but not properly done
     goal = kummer_scalar(hash, K, sigma[3])
 
     if kummer_point_equal(goal, hash):

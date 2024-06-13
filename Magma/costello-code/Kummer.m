@@ -215,8 +215,8 @@ DBLADD:=function(P,Q,R,K);
 
 	P:=C(P,K[3]); Q:=C(Q,R);
 
-	if P eq [0,0,0,0]  or Q eq [0,0,0,0] then
-		"todo: fix DBLADD\n\n";
+	if P eq [0,0,0,0] or Q eq [0,0,0,0] then
+		"DBLADD failed\n\n";
 		printf "P := %o;\n", tmp[1];
 		printf "Q := %o;\n", tmp[2];
 		printf "R := %o;\n\n", tmp[3];

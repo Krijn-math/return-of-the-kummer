@@ -366,9 +366,7 @@ def three_point_ladder(P, Q, R, m, K):
         else:
             P0, P2 = DBLADD(P0, P2, invert4_constants(P1), K)
 
-    if P1 == [0, 0, 0, 0]:
-        print("TODO: fix DBLADD")
-        assert False
+    assert P1 != [0, 0, 0, 0], "DBLADD failed"
 
     return P1
 
@@ -574,7 +572,7 @@ def kummer_to_jac_point(P, K, ros):
 
     u0, u1, v02 = get_v02(P, K, ros)
 
-    # TODO: Remove inversions?
+    # improvement: Remove inversions
     u0 = seq_to_element(u0)
     u1 = seq_to_element(u1)
     v02 = seq_to_element(v02)

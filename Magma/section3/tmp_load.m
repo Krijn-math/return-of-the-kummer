@@ -328,8 +328,7 @@ function RosenhainToKummer(D, ros, K)
     if D eq Parent(D)!0 then return K[2]; end if;
 
     if Degree(D[2]) eq 3 then
-        //TODO
-        print "todo with infinity";
+        print "this is an edge case, which requires manual formulas for infinity";
         assert false;
     end if;
 

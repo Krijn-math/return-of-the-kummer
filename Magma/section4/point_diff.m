@@ -151,7 +151,7 @@ lambda := A[1,1]/B[1,1];
 
 for i,j in [1..4] do CC[i,j] := lambda*B[i,j]; end for;
 if A ne CC then
-    "TODO: biquadratics failed on intermediate kummer :(";
+    "biquadratics failed on intermediate kummer :(";
 end if;
 
 

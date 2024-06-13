@@ -390,4 +390,4 @@ if __name__ == "__main__":
 
 
     print("Testing done.")
-    # TODO: test non coprime case
+    # improvement: test non coprime case

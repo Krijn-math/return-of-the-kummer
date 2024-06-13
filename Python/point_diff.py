@@ -22,7 +22,7 @@ def point_difference(P, Q, K):
     INPUTS: - P and Q, points on the squared Kummer surface K
             - K, the squared Kummer surface
 
-    OUTPUTS: - P \pm Q, the point difference or sum
+    OUTPUTS: - P pm Q, the point difference or sum
     
     COST: Excluding the cost of Hadamard, the biquadratics and the root-finding,
     we find a total cost of 30 M + 1S  + 11a, given a cost of 11M + 3a for the gcd

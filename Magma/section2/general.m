@@ -79,9 +79,8 @@ function Kgen_getAllTwoTorsion(Kgen)
     rhs := HyperellipticPolynomials(Curve(Jacobian(Kgen)));
     wp := [ p[1] : p in Roots(rhs)];
     if #wp lt 5 then
-        //todo: solve by extension field
-        done := false;
-        assert done;
+        //can be solved by extension field
+        assert false;
     end if;
 
     Points := [];
